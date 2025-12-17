@@ -1,44 +1,39 @@
----
-
 # Jotura 📝
 
-**Jotura** is a full-stack **note-taking web application** designed for performance, scalability, and clean architecture.
-It features a modern **React (Vite)** frontend and a robust **Express + MongoDB** backend, with production-ready configurations and security best practices.
+**Jotura** is a full-stack note-taking web application designed for performance, scalability, and clean architecture.  
+It features a modern React (Vite) frontend and a robust Express + MongoDB backend, with production-ready configurations and security best practices.
 
 ---
 
 ## 🚀 Key Features
 
-* Full **CRUD** functionality for managing notes
-* **Rate limiting** middleware to protect APIs from abuse
-* **CORS** configuration for both local and production environments
-* Secure **environment variable** handling using `dotenv`
-* Responsive and modern UI built with **React + Vite**
-* Styled using **Tailwind CSS** with **daisyUI**
-* Backend powered by **Node.js, Express, and MongoDB**
-* Deployed and production-ready on **Render**
+- Full CRUD functionality for managing notes
+- API rate limiting powered by Upstash (Redis-based) for enhanced security
+- CORS configuration for both local and production environments
+- Secure environment variable handling using dotenv
+- Responsive and modern UI built with React and Vite
+- Styled using Tailwind CSS with daisyUI
+- Backend powered by Node.js, Express, MongoDB, and Upstash Redis
+- Deployed and production-ready on Render
 
 ---
 
 ## 🏗️ Tech Stack
 
 ### Frontend
-
-* React (Vite)
-* Tailwind CSS
-* daisyUI
+- React (Vite)
+- Tailwind CSS
+- daisyUI
 
 ### Backend
-
-* Node.js
-* Express.js
-* MongoDB
-* Mongoose
-* Express Rate Limiter
+- Node.js
+- Express.js
+- MongoDB
+- Mongoose
+- Upstash Redis (Rate Limiting)
 
 ### Deployment
-
-* Render
+- Render
 
 ---
 
@@ -51,8 +46,8 @@ JOTURA/
 │   ├── src/
 │   │   ├── server.js        # Application entry point
 │   │   ├── routes/          # Notes API routes
-│   │   ├── config/          # Database configuration
-│   │   └── middlewares/     # Rate limiting & other middleware
+│   │   ├── config/          # Database and Upstash configuration
+│   │   └── middlewares/     # Rate limiting and other middleware
 │   └── package.json
 │
 ├── frontend/                # React + Vite frontend
@@ -63,18 +58,18 @@ JOTURA/
 │
 ├── README.md                # Project documentation
 └── package.json             # Root scripts
-```
+````
 
-> ⚠️ **Security Notice**
+> ⚠️ Security Notice
 > Never commit `.env` files. Ensure your `.gitignore` includes:
 >
-> ```bash
+> ```
 > backend/.env
 > ```
 
 ---
 
-## 🛠️ Installation & Setup
+## 🛠️ Installation and Setup
 
 ### Clone the Repository
 
@@ -91,13 +86,6 @@ npm install
 npm run dev
 ```
 
-Create a `.env` file inside `backend/`:
-
-```env
-MONGO_URI=your_mongodb_connection_string
-PORT=5000
-```
-
 ### Frontend Setup
 
 ```bash
@@ -110,15 +98,15 @@ npm run dev
 
 ## 🌐 Live Demo
 
-🔗 **Visit:** [https://jotura-3.onrender.com/](https://jotura-3.onrender.com/)
+Visit: [https://jotura-3.onrender.com/](https://jotura-3.onrender.com/)
 
 ---
 
 ## 📌 Notes
 
-* Ensure MongoDB is accessible before starting the backend
-* Configure environment variables correctly for production
-* API rate limiting is enabled by default for enhanced security
+* Ensure MongoDB and Upstash Redis are accessible before starting the backend
+* Properly configure environment variables for production deployments
+* Upstash-powered rate limiting is enabled by default to prevent API abuse
 
----
+```
 
